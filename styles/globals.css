@@ -41,6 +41,7 @@ body,
     --radius: 0.5rem;
 
     --brand: 45 100% 50%;
+    --brand-accent: 28 100% 50%;
   }
 
   .dark {
@@ -73,6 +74,7 @@ body,
     --ring: 0 0% 83.1%;
 
     --brand: 45 100% 50%;
+    --brand-accent: 28 100% 50%;
   }
 }
 

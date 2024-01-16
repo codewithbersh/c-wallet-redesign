@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
+
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 
 import { Header } from "@/components/header/header";
+
 const sans = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -34,7 +36,7 @@ export default function RootLayout({
       className={cn(
         " bg-background antialiased",
         sans.variable,
-        serif.variable
+        serif.variable,
       )}
     >
       <body className="relative">

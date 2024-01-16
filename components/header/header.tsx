@@ -23,7 +23,7 @@ export const navRoutes = [
 
 export const Header = () => {
   return (
-    <div className="fixed left-0 top-0 h-[72px] w-full border-b p-4 shadow-sm">
+    <div className="fixed left-0 top-0 z-50 h-[72px] w-full border-b bg-background p-4 shadow-sm">
       <div className=" mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-brand p-1">
