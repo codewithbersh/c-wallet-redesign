@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
 
+import { Header } from "@/components/header/header";
 const sans = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -27,8 +29,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={cn(
+        " bg-background antialiased",
+        sans.variable,
+        serif.variable
+      )}
+    >
+      <body className="relative">
+        <Header />
+        <main className="py-[72px]">{children}</main>
+      </body>
     </html>
   );
 }
