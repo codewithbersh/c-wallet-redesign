@@ -1,28 +1,34 @@
 "use client";
 
-import { FcLock } from "react-icons/fc";
+import { FcLock, FcNfcSign, FcIdea } from "react-icons/fc";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
 
 const benefits = [
   {
     value: "security",
     icon: FcLock,
-    label: "Top notch security",
-    content:
-      "Lorem ipsum dolor sit amet consectur lorem ipsum dolor sit amet consectur lorem ipsum.",
+    label: "Praesent ut purus",
+    content: "/transactions-mock-up.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin ut purus sit amet gravida.",
   },
   {
     value: "cs",
-    icon: FcLock,
-    label: "Top notch security",
-    content: "LAs",
+    icon: FcNfcSign,
+    label: "Lorem ipsum",
+    content: "/mobile-hero-image.png",
+    description:
+      "Aenean diam augue, sagittis eu est at, porta tempor diam. Fusce vestibulum rhoncus convallis.",
   },
   {
     value: "bd",
-    icon: FcLock,
-    label: "Top notch security",
-    content: "LAs",
+    icon: FcIdea,
+    label: "Dolor sit ament",
+    content: "/transactions-mock-up.png",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt diam eu orci feugiat efficitur. ",
   },
 ];
 
@@ -39,12 +45,9 @@ export const Benefits = () => {
               className="mx-auto w-full lg:cursor-pointer lg:data-[state=active]:bg-yellow-50"
             >
               <div className="flex w-full flex-col !items-start !justify-start gap-4 rounded-lg border border-border/25 !p-8 text-start shadow-md lg:hover:shadow-none">
-                <FcLock className="h-8 w-8" />
-                <h1 className="font-bold">Top notch</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate corrupti itaque.
-                </p>
+                <benefit.icon className="h-8 w-8" />
+                <h1 className="font-bold">{benefit.label}</h1>
+                <p>{benefit.description}</p>
               </div>
             </TabsTrigger>
           ))}
@@ -55,9 +58,16 @@ export const Benefits = () => {
             <TabsContent
               key={benefit.value}
               value={benefit.value}
-              className="z-50 h-full w-full rounded-lg bg-yellow-50 p-4"
+              className="z-50 h-full w-full rounded-lg bg-yellow-50 p-8"
             >
-              {benefit.content}
+              <div className="relative h-full w-full">
+                <Image
+                  fill
+                  className="object-cover object-center"
+                  src={benefit.content}
+                  alt="Content"
+                />
+              </div>
             </TabsContent>
           ))}
         </div>

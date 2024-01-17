@@ -28,7 +28,7 @@ export const Features = () => {
         {features.map((feature) => (
           <div
             key={feature.label}
-            className="flex flex-1 flex-col items-center justify-center gap-4 rounded-md  bg-yellow-50 p-4 text-center"
+            className="flex flex-1 flex-col items-center justify-center gap-4 rounded-md  border p-4 text-center shadow-sm"
           >
             <div className="relative h-12 w-12 rounded-full bg-brand/50 p-2">
               <feature.icon className="absolute -bottom-3 -right-3 h-10 w-10" />
