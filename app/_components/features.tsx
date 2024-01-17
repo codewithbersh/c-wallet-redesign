@@ -3,19 +3,19 @@ import { FcMoneyTransfer, FcBullish, FcCandleSticks } from "react-icons/fc";
 const features = [
   {
     icon: FcMoneyTransfer,
-    label: "Wallet transfer",
+    label: "Ipsum dolor",
     description:
       "Lorem ipsum dolor sit amet consectur dolor lorem ipsum dolor lorem.",
   },
   {
     icon: FcBullish,
-    label: "Wallet transfer",
+    label: "Amet consectetur",
     description:
       "Lorem ipsum dolor sit amet consectur dolor lorem ipsum dolor lorem.",
   },
   {
     icon: FcCandleSticks,
-    label: "Wallet transfer",
+    label: "Dolor lorem",
     description:
       "Lorem ipsum dolor sit amet consectur dolor lorem ipsum dolor lorem.",
   },
